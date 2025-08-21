@@ -13,7 +13,8 @@ public class Taller {
         double galPorLitro = 0.264172;
         double vmin = 30.0, vmax = 90.0;
         double va = 40.0, vb = 80.0, ca = 0.05, cb = 0.09;
-        double a = -0.008, b = 0.08, c = 4.0;
+        double a = -0.0008, b = 0.08, c = 4.0;
+       
 
         
 
@@ -24,6 +25,7 @@ public class Taller {
        double v2 = (41.79);
        double v3 = (46.50);
        System.out.println((d1*v1+d2*v2+d3*v3)/(d1+d2+d3));
+       double vprom = (44.55);
        System.out.println(d1/l1);
        System.out.println(d2/l2);
        System.out.println(d3/l3);
@@ -41,7 +43,7 @@ public class Taller {
        System.out.println(comb+dep+peajes);
        double directo = (40.52);
        System.out.println(directo/(d1+d2+d3));
-       double costokm = (0.29);
+       double costokm = (0.2942);
        System.out.println(largo*ancho*alto);
        double volumenM3 = (2.64);
        System.out.println(masaCargaKg/volumenM3);
@@ -50,6 +52,44 @@ public class Taller {
        double ocupacion = (0.264);
        System.out.println((l1+l2+l3)*fCO2);
        double co2total = (43.68);
+       System.out.println(co2total/(d1+d2+d3));
+       double co2porKm = (0.317);
+       System.out.println(vprom*(1000/3600));
+       System.out.println((l1+l2+l3)*galPorLitro);
+       double galtotal = (4.3060);
+       System.out.println((v1+v2+v3)/3);
+       double vmedia = (44.984);
+       System.out.println(Math.sqrt(((Math.pow(v1-vmedia,2))+(Math.pow(v2-vmedia,2))+(Math.pow(v3-vmedia,2)))/3));
+       double sigma = (2.26);
+       System.out.println((t1*v1+t2*v2+t3*v3)/(t1+t2+t3));
+       double vpondt = (44.419);
+       System.out.println(ca+(cb-ca)*(vprom-va)/(vb-va));
+       double cvprom = (0.05455);
+       System.out.println(cvprom*(d1+d2+d3));
+       double costomant = (7.511);
+       System.out.println(a * (vprom * vprom) + b * vprom + c);
+       double kmlModelo = (5.976);
+       System.out.println((d1+d2+d3)/kmlModelo);
+       double litrosModelo = (23.041);
+       double w1 = (0.25);
+       double w2 = (0.25);
+       double w3 = (0.25);
+       double w4 = (0.25);
+       System.out.println((w1+w2+w3+w4));
+       System.out.println(w1*(1/costokm) + w2*kmltotal + w3*(1/co2porKm) + w4*(1/(1+sigma)));
+       double score = (3.82);
+
+       
+
+
+       
+
+       
+
+
+
+    
+
        
 
 
