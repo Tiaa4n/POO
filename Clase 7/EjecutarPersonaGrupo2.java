@@ -1,8 +1,7 @@
 public class EjecutarPersonaGrupo2 {
     public static void main(String[] args) {
         
-        //Creación del objeto
-        //El operador "new" me permite instanciar(crear) el objeto
+        
         Persona objPersona1 = new Persona(1006234, 
                                             "Juan Manuel", 
                                             "Quijano López", 
@@ -17,9 +16,19 @@ public class EjecutarPersonaGrupo2 {
                                             1.84, 
                                             65.0);
 
+        
         System.out.println(objPersona2.estudiar("Ingeniería de Sistemas"));
 
-        //Tarea: implementar los metodos get y set en la clase Persona
-        //dichos métodos utilizarlos en la clase EjecutarPersonaGrupo2
+       
+        System.out.println("Nombre de la persona 1: " + objPersona1.getNombres());
+        System.out.println("Edad de la persona 2: " + objPersona2.getEdad());
+
+        
+        objPersona1.setEdad(24); 
+        objPersona2.setPeso(68.5);
+
+        
+        System.out.println("Nueva edad persona 1: " + objPersona1.getEdad());
+        System.out.println("Nuevo peso persona 2: " + objPersona2.getPeso());
     }
 }
