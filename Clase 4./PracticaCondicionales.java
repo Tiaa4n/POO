@@ -1,51 +1,42 @@
-import java.util.Scanner;
-
 public class PracticaCondicionales {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        System.out.println("===== EJERCICIOS CAPITULO 4 (Sin Scanner ni switch) =====");
 
-        System.out.println("===== EJERCICIOS CAPITULO 4 =====");
-
-        ejercicio41(sc);
-        ejercicio42(sc);
-        ejercicio43(sc);
-        ejercicio44(sc);
+        ejercicio41();
+        ejercicio42();
+        ejercicio43();
+        ejercicio44();
         ejercicio45();
-        ejercicio46(sc);
-        ejercicio47(sc);
-        ejercicio48(sc);
-        ejercicio49(sc);
-        ejercicio410(sc);
-        ejercicio411(sc);
-        ejercicio412(sc);
-
-        sc.close();
+        ejercicio46();
+        ejercicio47();
+        ejercicio48();
+        ejercicio49();
+        ejercicio410();
+        ejercicio411();
+        ejercicio412();
     }
 
-    // 4.1 Condicionales simples
-    public static void ejercicio41(Scanner sc) {
+    // 4.1 
+    public static void ejercicio41() {
         System.out.println("\n--- Ejercicio 4.1 ---");
 
         // a)
-        System.out.print("Ingrese un ángulo en grados: ");
-        int angulo = sc.nextInt();
+        int angulo = 90;
         if (angulo == 90)
             System.out.println("El ángulo es un ángulo recto");
         else
             System.out.println("El ángulo no es un ángulo recto");
 
         // b)
-        System.out.print("Ingrese la temperatura en °C: ");
-        int temp = sc.nextInt();
+        int temp = 105;
         if (temp > 100)
             System.out.println("Por encima del punto de ebullición del agua");
         else
             System.out.println("Por debajo del punto de ebullición del agua");
 
         // c)
-        System.out.print("Ingrese un número entero: ");
-        int num = sc.nextInt();
+        int num = -5;
         int totalPositivos = 0, totalNegativos = 0;
         if (num > 0)
             totalPositivos += num;
@@ -55,31 +46,25 @@ public class PracticaCondicionales {
         System.out.println("Suma de negativos: " + totalNegativos);
 
         // d)
-        System.out.print("Ingrese valores de x, y, z: ");
-        int x = sc.nextInt(), y = sc.nextInt(), z = sc.nextInt();
+        int x = 5, y = 10, z = 15;
         if (x <= y && y <= z && z < 20) {
-            System.out.print("Ingrese valor de p: ");
-            int p = sc.nextInt();
+            int p = 7;
             System.out.println("p = " + p);
         }
 
         // e)
-        System.out.print("Ingrese distancia: ");
-        int distancia = sc.nextInt();
+        int distancia = 25;
         if (distancia > 20 && distancia < 35) {
-            System.out.print("Ingrese tiempo: ");
-            int tiempo = sc.nextInt();
+            int tiempo = 15;
             System.out.println("Tiempo = " + tiempo);
         }
     }
 
-    // 4.2 Comparación de dos números
-    public static void ejercicio42(Scanner sc) {
+    // 4.2 
+    public static void ejercicio42() {
         System.out.println("\n--- Ejercicio 4.2 ---");
-        System.out.print("Ingrese primer número: ");
-        int a = sc.nextInt();
-        System.out.print("Ingrese segundo número: ");
-        int b = sc.nextInt();
+        int a = 7;
+        int b = 12;
 
         if (a > b)
             System.out.println("El primer número es el mayor");
@@ -89,11 +74,10 @@ public class PracticaCondicionales {
             System.out.println("Ambos números son iguales");
     }
 
-    // 4.3 Número central
-    public static void ejercicio43(Scanner sc) {
+    // 4.3 
+    public static void ejercicio43() {
         System.out.println("\n--- Ejercicio 4.3 ---");
-        System.out.print("Ingrese tres números: ");
-        int a = sc.nextInt(), b = sc.nextInt(), c = sc.nextInt();
+        int a = 8, b = 3, c = 5;
         int central;
 
         if ((a > b && a < c) || (a > c && a < b)) central = a;
@@ -103,32 +87,29 @@ public class PracticaCondicionales {
         System.out.println("El número central es: " + central);
     }
 
-    // 4.4 Raíz cuadrada
-    public static void ejercicio44(Scanner sc) {
+    // 4.4 
+    public static void ejercicio44() {
         System.out.println("\n--- Ejercicio 4.4 ---");
-        System.out.print("Ingrese un número: ");
-        double num = sc.nextDouble();
+        double num = 25;
         double raiz = Math.sqrt(num);
         System.out.println("La raíz cuadrada es: " + raiz);
     }
 
-    // 4.5 Número par
+    // 4.5 
     public static void ejercicio45() {
         System.out.println("\n--- Ejercicio 4.5 ---");
-        int n = 12; // ejemplo fijo
+        int n = 12;
         if (n % 2 == 0)
             System.out.println(n + " es par");
         else
             System.out.println(n + " es impar");
     }
 
-    // 4.6 Precio de billete tren
-    public static void ejercicio46(Scanner sc) {
+    // 4.6 
+    public static void ejercicio46() {
         System.out.println("\n--- Ejercicio 4.6 ---");
-        System.out.print("Ingrese días de estancia: ");
-        int dias = sc.nextInt();
-        System.out.print("Ingrese distancia en km: ");
-        int km = sc.nextInt();
+        int dias = 10;
+        int km = 1000;
 
         double precio = km * 2.5;
         if (dias > 7 && km > 800) precio *= 0.7;
@@ -136,15 +117,16 @@ public class PracticaCondicionales {
         System.out.println("Precio del billete: " + precio);
     }
 
-    // 4.7 Fecha siguiente
-    public static void ejercicio47(Scanner sc) {
+    // 4.7
+    public static void ejercicio47() {
         System.out.println("\n--- Ejercicio 4.7 ---");
-        System.out.print("Ingrese día, mes y año: ");
-        int d = sc.nextInt(), m = sc.nextInt(), a = sc.nextInt();
+        int d = 28, m = 2, a = 2024; // Año bisiesto
 
         d++;
-        int[] diasMes = {31, (a % 4 == 0 && a % 100 != 0) || (a % 400 == 0) ? 29 : 28,
-                31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+        int[] diasMes = {
+            31, (a % 4 == 0 && a % 100 != 0) || (a % 400 == 0) ? 29 : 28,
+            31, 30, 31, 30, 31, 31, 30, 31, 30, 31
+        };
 
         if (d > diasMes[m - 1]) {
             d = 1;
@@ -157,16 +139,14 @@ public class PracticaCondicionales {
         System.out.println("Día siguiente: " + d + "/" + m + "/" + a);
     }
 
-    // 4.8 Estadística de pesos
-    public static void ejercicio48(Scanner sc) {
+    // 4.8 
+    public static void ejercicio48() {
         System.out.println("\n--- Ejercicio 4.8 ---");
-        System.out.print("Ingrese cantidad de alumnos: ");
-        int n = sc.nextInt();
+        int[] pesos = {35, 42, 48, 53, 59, 62};
+
         int menos40 = 0, entre40y50 = 0, entre50y60 = 0, masIgual60 = 0;
 
-        for (int i = 1; i <= n; i++) {
-            System.out.print("Peso alumno " + i + ": ");
-            int peso = sc.nextInt();
+        for (int peso : pesos) {
             if (peso < 40) menos40++;
             else if (peso <= 50) entre40y50++;
             else if (peso < 60) entre50y60++;
@@ -179,22 +159,20 @@ public class PracticaCondicionales {
         System.out.println("60kg o más: " + masIgual60);
     }
 
-    // 4.9 Comprobar divisor
-    public static void ejercicio49(Scanner sc) {
+    // 4.9 
+    public static void ejercicio49() {
         System.out.println("\n--- Ejercicio 4.9 ---");
-        System.out.print("Ingrese dos números: ");
-        int a = sc.nextInt(), b = sc.nextInt();
+        int a = 10, b = 5;
         if (a % b == 0 || b % a == 0)
             System.out.println("Uno es divisor del otro");
         else
             System.out.println("Ninguno es divisor del otro");
     }
 
-    // 4.10 Tipo de ángulo
-    public static void ejercicio410(Scanner sc) {
+    // 4.10 
+    public static void ejercicio410() {
         System.out.println("\n--- Ejercicio 4.10 ---");
-        System.out.print("Ingrese ángulo en grados: ");
-        int angulo = sc.nextInt();
+        int angulo = 120;
         if (angulo < 90)
             System.out.println("Ángulo agudo");
         else if (angulo == 90)
@@ -205,11 +183,10 @@ public class PracticaCondicionales {
             System.out.println("Ángulo no clasificado");
     }
 
-    // 4.11 Nota americana
-    public static void ejercicio411(Scanner sc) {
+    // 4.11 
+    public static void ejercicio411() {
         System.out.println("\n--- Ejercicio 4.11 ---");
-        System.out.print("Ingrese calificación (0-100): ");
-        int nota = sc.nextInt();
+        int nota = 85;
         char letra;
         if (nota >= 90) letra = 'A';
         else if (nota >= 80) letra = 'B';
@@ -219,22 +196,32 @@ public class PracticaCondicionales {
         System.out.println("Calificación en letra: " + letra);
     }
 
-    // 4.12 Calculadora
-    public static void ejercicio412(Scanner sc) {
+    // 4.12 
+    public static void ejercicio412() {
         System.out.println("\n--- Ejercicio 4.12 ---");
-        System.out.print("Ingrese dos números: ");
-        double a = sc.nextDouble(), b = sc.nextDouble();
-        System.out.println("Seleccione operación (1=Suma, 2=Resta, 3=Multiplicación, 4=División): ");
-        int op = sc.nextInt();
-        double r = 0;
+        double a = 10;
+        double b = 5;
+        int op = 4; // 1=Suma, 2=Resta, 3=Mult, 4=División
+        double r;
 
-        switch (op) {
-            case 1: r = a + b; break;
-            case 2: r = a - b; break;
-            case 3: r = a * b; break;
-            case 4: r = (b != 0) ? a / b : Double.NaN; break;
-            default: System.out.println("Operación no válida"); return;
+        if (op == 1) {
+            r = a + b;
+            System.out.println("Resultado: " + r);
+        } else if (op == 2) {
+            r = a - b;
+            System.out.println("Resultado: " + r);
+        } else if (op == 3) {
+            r = a * b;
+            System.out.println("Resultado: " + r);
+        } else if (op == 4) {
+            if (b != 0) {
+                r = a / b;
+                System.out.println("Resultado: " + r);
+            } else {
+                System.out.println("Error: División por cero");
+            }
+        } else {
+            System.out.println("Operación no válida");
         }
-        System.out.println("Resultado: " + r);
     }
 }
