@@ -1,6 +1,8 @@
 public class EjecutarPersonaGrupo2 {
     public static void main(String[] args) {
         
+    
+        
         
         Persona objPersona1 = new Persona(1006234, 
                                             "Juan Manuel", 

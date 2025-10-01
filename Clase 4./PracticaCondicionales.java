@@ -95,7 +95,7 @@ public class PracticaCondicionales {
         System.out.println("La raíz cuadrada es: " + raiz);
     }
 
-    // 4.5 
+    //4.5 
     public static void ejercicio45() {
         System.out.println("\n--- Ejercicio 4.5 ---");
         int n = 12;
@@ -105,7 +105,7 @@ public class PracticaCondicionales {
             System.out.println(n + " es impar");
     }
 
-    // 4.6 
+    //4.6 
     public static void ejercicio46() {
         System.out.println("\n--- Ejercicio 4.6 ---");
         int dias = 10;
