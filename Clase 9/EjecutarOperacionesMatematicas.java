@@ -2,39 +2,76 @@ import java.util.Scanner;
 
 public class EjecutarOperacionesMatematicas {
     public static void main(String[] args) {
-        //Clase Scanner para leer datos por teclado
         Scanner sc = new Scanner(System.in);
-        System.out.print("Digite el primer numero...");
-        //Con el objeto sc llamamos los metodos de la clase Scanner, por ejemplo: sc.nextInt()
-        int a = sc.nextInt();
-        System.out.print("Digite el segundo numero...");
-        int b = sc.nextInt();
 
-        /*
-         * Para leer enteros: nextInt() o nextLong()
-         * Para leer reales: nextDouble() o nextFloat
-         * Para leer cadenas: next() o nextLine()
-         * Para leer booleanos: nextBoolean()
-         */
-        
-        OperacionesMatematicas objOp = new OperacionesMatematicas(a,b);
+        System.out.print("Digite el primer número: ");
+        double a = sc.nextDouble();
+        System.out.print("Digite el segundo número: ");
+        double b = sc.nextDouble();
 
-        System.out.println("El resultado de la suma es: " + objOp.sumar());
-        System.out.println("El resultado de la resta es: " + objOp.restar());
-        System.out.println("El resultado de la multiplicacion es: " + objOp.multiplicar());
-        System.out.println("El resultado de la division es: " + objOp.dividir());
+        OperacionesMatematicas objOp = new OperacionesMatematicas(a, b);
+        int opcion;
+
+        do {
+            System.out.println("\n MENÚ DE OPERACIONES");
+            System.out.println("1. Sumar");
+            System.out.println("2. Restar");
+            System.out.println("3. Multiplicar");
+            System.out.println("4. Dividir");
+            System.out.println("5. Elevar al cuadrado");
+            System.out.println("6. Elevar al cubo");
+            System.out.println("7. Elevar a la n");
+            System.out.println("8. Raíz cuadrada");
+            System.out.println("9. Raíz cúbica");
+            System.out.println("10. Raíz n");
+            System.out.println("0. Salir");
+            System.out.print("Seleccione una opción: ");
+            opcion = sc.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    System.out.println("Resultado: " + objOp.sumar());
+                    break;
+                case 2:
+                    System.out.println("Resultado: " + objOp.restar());
+                    break;
+                case 3:
+                    System.out.println("Resultado: " + objOp.multiplicar());
+                    break;
+                case 4:
+                    System.out.println("Resultado: " + objOp.dividir());
+                    break;
+                case 5:
+                    System.out.println("Resultado: " + objOp.elevarAlCuadrado());
+                    break;
+                case 6:
+                    System.out.println("Resultado: " + objOp.elevarAlCubo());
+                    break;
+                case 7:
+                    System.out.print("Ingrese el exponente n: ");
+                    double n = sc.nextDouble();
+                    System.out.println("Resultado: " + objOp.elevarAN(n));
+                    break;
+                case 8:
+                    System.out.println("Resultado: " + objOp.raizCuadrada());
+                    break;
+                case 9:
+                    System.out.println("Resultado: " + objOp.raizCubica());
+                    break;
+                case 10:
+                    System.out.print("Ingrese el índice n: ");
+                    double indice = sc.nextDouble();
+                    System.out.println("Resultado: " + objOp.raizN(indice));
+                    break;
+                case 0:
+                    System.out.println("Saliendo del programa...");
+                    break;
+                default:
+                    System.out.println("Opción no válida. Intente de nuevo.");
+            }
+
+        } while (opcion != 0);
+
         sc.close();
-
-        //Tarea: implementar los metodos:
-        // elevar al cuadrado
-        // elevar al cubo
-        // elevar a la n
-        // sacar la raiz cuadrada
-        // sacar la raiz cubica
-        // sacar la raiz n
-        // Todo lo anterior con un menu de opciones
-
-        
-
     }
 }
