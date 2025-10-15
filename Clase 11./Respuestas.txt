@@ -1,0 +1,52 @@
+1.	¿Qué es la encapsulación y por qué es importante en la Programación Orientada a Objetos?
+R/ La encapsulación es el principio que consiste en ocultar los datos internos de una clase y
+ controlar su acceso mediante los métodos públicos,y es importante la encapsulación porque protege la integridad de los datos y también evita las modificaciones indebidas fuera de la clase
+2.	¿Qué diferencia hay entre un método y un constructor?
+R/ La diferencia que hay entre un método y un constructor es que 
+el método define acciones o comportamientos que puede tener el objeto después de ser 
+creado y el constructor inica el objeto cuando se crea
+3.	¿Por qué los atributos deben ser privados y no públicos?
+R/ Deben ser privados porque se evita el acceso directo
+ desde fuera de la clase garantizando que los valores solo se modifiquen de forma controlada
+4.	¿Qué función cumplen los getters y setters?
+R/ Que los getters(get) permiten leer y los setters(set) permiten modificar atributos privados 
+con las validaciones que aseguran su correcto uso
+5.	Verdadero o falso: “Un método setter no debe validar los datos que recibe.” Justifique.
+R/ Es falso, porque lo setters deben validar los datos para 
+mantener coherencia y evitar valores incorrectos en los atributos
+
+
+
+
+
+
+
+
+______________________________________________________________________________________
+|Nombre |Tipo de dato      |	Visibilidad |	Descripción                          |
+|String |Titular	       |private	        |Nombre del dueño de la cuenta           |
+|String |	NumeroCuenta   |private	        |Numero irrepetible de la cuenta bancaria|
+|double |	saldo          |private	        |Dinero disponible                       | 
+--------------------------------------------------------------------------------------
+Métodos
+______________________________________________________________________________________________
+|Nombre	  |Parámetros     |	Retorno|	Descripción                                          |
+|depositar|	Double (monto)|	void   |Aumenta el saldo de la cuenta                            |
+|retirar  |	Double(monto) |	void   |Disminuye el saldo de la cuenta si hay fondos suficientes|
+|ToString |		String    |	Retorna| la información básica de la cuenta                      |
+----------------------------------------------------------------------------------------------
+CLASE B:Atributos
+________________________________________________________________________
+|Nombre	        |Tipo de dato |	Visibilidad|	Descripción            |
+|Codigo	String	|             |Private     |Identificador del producto |
+|Descripcion	|String	      |Private	   |Detalle del producto       |
+|Cantidad	    |int	      |Private	   |Número de unidades         |
+|PrecioUnitario	|double	      |Private	   |Valor por unidad           |
+------------------------------------------------------------------------
+Metodos
+__________________________________________________________________________________________________________
+|Nombre             |	parámetros	  |Retorno |	Descripción                                          |
+|CalcularSubtotal   |		          | Double |Retorna el resultado de multiplicar la cantidad          |
+|Aplicar descuento  |Double porcentaje| void   |Aplica un descuento si esta entre 0 y 50                 |
+|incrementarcantidad|	Int valor     |	void   |Aumenta la cantidad si el valor ingresado es mayor que 0 |
+----------------------------------------------------------------------------------------------------------
