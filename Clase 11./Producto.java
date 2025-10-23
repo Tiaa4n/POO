@@ -5,7 +5,7 @@ public class Producto {
     private int cantidad;
     private double precioUnitario;
 
-    // Constructor por defecto
+    
     public Producto() {
         this.codigo = "2008";
         this.descripcion = "Produc";
@@ -13,7 +13,7 @@ public class Producto {
         this.precioUnitario = 0.0;
     }
 
-    // Constructor parametrizado con validaciones
+    
     public Producto(String codigo, String descripcion, int cantidad, double precioUnitario) {
         this.codigo = (codigo != null && !codigo.isEmpty()) ? codigo : "2008";
         this.descripcion = (descripcion != null && !descripcion.isEmpty()) ? descripcion : "Produc";
@@ -42,12 +42,12 @@ public class Producto {
         if (precioUnitario >= 0) this.precioUnitario = precioUnitario;
     }
 
-    // Método calcularSubtotal
+    
     public double calcularSubtotal() {
         return cantidad * precioUnitario;
     }
 
-    // Método aplicarDescuento
+    
     public double aplicarDescuento(double porcentaje) {
         if (porcentaje >= 0 && porcentaje <= 50) {
             double subtotal = calcularSubtotal();
@@ -58,12 +58,12 @@ public class Producto {
         }
     }
 
-    // Método incrementarCantidad
+    
     public void incrementarCantidad(int valor) {
         if (valor > 0) cantidad += valor;
     }
 
-    // Método toString
+    
     @Override
     public String toString() {
         return "Producto: " + descripcion + " (" + codigo + "), Cantidad: " + cantidad + ", Precio unitario: $" + precioUnitario;
