@@ -1,8 +1,8 @@
 import java.util.Date;
 
-// ========================
+
 // Clase Cliente
-// ========================
+
 public class Cliente {
     private String cedula;
     private String nombre;
@@ -34,9 +34,13 @@ public class Cliente {
     }
 }
 
-// ========================
+
+
+
+
+
 // Clase Producto (superclase)
-// ========================
+
 abstract class Producto {
     protected int numero;
 
@@ -58,9 +62,14 @@ abstract class Producto {
     }
 }
 
-// ========================
+
+
+
+
+
+
 // Subclase Impresion
-// ========================
+
 class Impresion extends Producto {
     private String color;
     private Foto[] fotos;
@@ -85,9 +94,15 @@ class Impresion extends Producto {
     }
 }
 
-// ========================
+
+
+
+
+
+
+
 // Subclase Camara
-// ========================
+
 class Camara extends Producto {
     private String marca;
     private String modelo;
@@ -112,9 +127,14 @@ class Camara extends Producto {
     }
 }
 
-// ========================
+
+
+
+
+
+
 // Clase Foto
-// ========================
+
 class Foto {
     private String fichero;
 
@@ -136,9 +156,14 @@ class Foto {
     }
 }
 
-// ========================
+
+
+
+
+
+
 // Clase Pedido
-// ========================
+
 class Pedido {
     private Cliente cliente;
     private Producto[] productos;
