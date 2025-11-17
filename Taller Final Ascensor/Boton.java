@@ -1,7 +1,7 @@
 //Clase Boton, es la que representa un boton generico
 public class Boton {
     private boolean presionado;
-    private String tipo; //subir,bajar,piso,abrir,cerrar,emergencia
+    protected String tipo; //subir,bajar,piso,abrir,cerrar,emergencia
 
     public Boton(String tipo) {
         this.tipo=tipo;

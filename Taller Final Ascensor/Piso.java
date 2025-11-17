@@ -14,11 +14,11 @@ public class Piso {
     }
 
     public void presionarSubir(){
-        boton.Subir.solicitarAscensor();
+        botonSubir.solicitarAscensor();
     }
 
     public void presionarBajar(){
-        boton.Bajar.solicitarAscensor();
+        botonBajar.solicitarAscensor();
     }
     
 }
