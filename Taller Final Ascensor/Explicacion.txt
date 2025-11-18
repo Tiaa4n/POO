@@ -1,0 +1,168 @@
+DESCRIPCIÓN DE LA SOLUCIÓN
+
+
+Para desarrollar el sistema de control del ascensor, primero analicé los requerimientos funcionales y los comparé con los componentes reales de un ascensor.
+La idea era crear una solución que no fuera solo código, sino que simulase lo más posible el comportamiento de un ascensor moderno: movimiento, llamadas desde pisos, selección interna, control de puertas, y emergencias.
+
+ 1. Análisis inicial del problema
+
+Lo primero que hice fue identificar qué objetos existen en un ascensor real.
+Me fijé en los elementos principales:
+
+Un ascensor que sube y baja.
+
+Puertas que se abren y cierran.
+
+Botones dentro del ascensor (para seleccionar pisos, abrir/cerrar puertas y emergencia).
+
+Botones en cada piso (subir y bajar).
+
+Pisos que el ascensor debe recorrer.
+
+
+
+También analicé la rúbrica, que exigía:
+✔ Uso de clases bien diseñadas
+✔ Herencia
+✔ Encapsulación
+✔ Manejo de eventos (botones, puertas, fallas)
+✔ Simulación del movimiento del ascensor
+✔ Menú para que el usuario interactúe
+
+Con eso claro, decidí aplicar herencia, composición, y separación completa de clases para tener un código modular.
+
+ 2. Diseño conceptual 
+Clase Boton → Clase padre
+
+Pensé que todos los botones, aunque fueran diferentes, tenían algo en común:
+
+Todos se presionan
+
+Todos tienen un tipo
+
+Todos pueden estar activos o no
+
+Así que creé una clase base: Boton.
+
+Esto me permitió aplicar herencia, reutilizar código y facilitar la extensión del sistema (por ejemplo, agregar el botón de emergencia fue muy sencillo gracias a eso).
+
+3. Diseño con herencia 
+
+Para aprovechar la herencia, dividí los botones así:
+
+BotonAscensor → Botones internos (seleccionar piso)
+
+BotonPiso → Botones externos (subir/bajar)
+
+BotonEmergencia → Con funciones extra
+
+Todos heredan de Boton
+
+Esto permite:
+
+Reutilizar comportamiento base
+
+Agregar comportamientos diferentes a cada tipo
+
+Cumplir con el principio de polimorfismo
+
+ 4. Análisis de composición
+
+Luego pensé en cómo los elementos se relacionan entre sí, siguiendo “objetos dentro de objetos”:
+
+El Ascensor contiene:
+
+Una Puerta
+
+Sus botones internos
+
+Un botón de emergencia
+
+Cada Piso contiene:
+
+BotónSubir
+
+BotónBajar
+
+Esto aplica composición, porque estas partes no pueden existir sin su contenedor (un piso sin botones o un ascensor sin puertas no tiene sentido).
+
+ 5. Movimiento del ascensor 
+
+Para simular el movimiento, pensé en cómo funciona un ascensor real:
+
+Si está en emergencia, no se mueve.
+
+Si selecciono un piso:
+
+El sistema evalúa si debe subir o bajar.
+
+Recorre piso por piso con mensajes, simulando el paso entre niveles.
+
+Al llegar, se detiene y abre las puertas.
+
+Decidí modelarlo así porque:
+
+Es fácil de entender visualmente.
+
+Simula el comportamiento real de los ascensores modernos.
+
+Permite aplicar control de flujo con ciclos y condiciones.
+
+6. Botón de emergencia 
+
+Analicé el proceso real de una emergencia:
+
+El ascensor debe detenerse inmediatamente.
+
+Debe abrir las puertas por seguridad.
+
+Debe notificar una alerta (simulada con mensajes).
+
+Con este análisis, diseñé el botón de emergencia como una subclase especial, ya que no es un botón cualquiera: tiene funciones propias.
+
+Implementé:
+
+activarEmergencia()
+
+desactivarEmergencia()
+
+Un estado global enEmergencia
+
+Esto añade realismo y cumple con el módulo de alertas y fallas solicitado en la rúbrica.
+
+ 7. Menú de interacción 
+
+El menú lo pensé simple para que el usuario (profesor o jurado) pudiera:
+
+Seleccionar pisos
+
+Ver el estado actual
+
+Activar/desactivar emergencia
+
+Abrir/cerrar puertas
+
+Usé un Scanner y un bucle do-while porque:
+
+Es fácil de manejar
+
+Permite repetir la interacción
+
+No obliga a usar interfaces gráficas complejas
+
+ 8. Conclusiones del análisis
+
+Durante el diseño pensé en cómo funcionaría un ascensor real, no solo en escribir código.
+Por eso mi solución se basa en:
+
+Herencia para evitar duplicar código
+
+Composición para reflejar la estructura real del ascensor
+
+Encapsulación para proteger los estados internos
+
+Polimorfismo para que los botones se comporten según su tipo
+
+Modularidad para que las clases estén separadas y claras
+
+Mi objetivo fue que el sistema fuera fácil de entender, fácil de extender y fiel al funcionamiento real.
