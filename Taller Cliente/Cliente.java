@@ -60,6 +60,10 @@ abstract class Producto {
     public String toString() {
         return "Producto [Número=" + numero + "]";
     }
+
+    protected abstract String calcularSubtotal();
+
+    protected abstract String aplicarDescuento(int i);
 }
 
 
@@ -91,6 +95,18 @@ class Impresion extends Producto {
     @Override
     public String toString() {
         return "Impresión [Número=" + numero + ", Color=" + color + ", Fotos=" + fotos.length + "]";
+    }
+
+    @Override
+    protected String calcularSubtotal() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calcularSubtotal'");
+    }
+
+    @Override
+    protected String aplicarDescuento(int i) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'aplicarDescuento'");
     }
 }
 
@@ -124,6 +140,18 @@ class Camara extends Producto {
     @Override
     public String toString() {
         return "Cámara [Número=" + numero + ", Marca=" + marca + ", Modelo=" + modelo + "]";
+    }
+
+    @Override
+    protected String calcularSubtotal() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calcularSubtotal'");
+    }
+
+    @Override
+    protected String aplicarDescuento(int i) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'aplicarDescuento'");
     }
 }
 

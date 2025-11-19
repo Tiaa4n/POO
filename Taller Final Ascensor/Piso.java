@@ -1,4 +1,4 @@
-public class Piso {
+public class Piso { //Representa cada piso del edificio
     private int numero;
     private BotonPiso botonSubir;
     private BotonPiso botonBajar;

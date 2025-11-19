@@ -1,4 +1,4 @@
-//Clase Boton del Ascensor,simula un boton del ascensor para selecionar el piso
+//Clase Boton del Ascensor,representan botones que permiten seleccionar pisos
 public class BotonAscensor extends Boton {
     public BotonAscensor(String tipo) {
         super(tipo);

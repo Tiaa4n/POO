@@ -1,4 +1,4 @@
-//Clase pricipal que hace todas las funciones del ascensor
+//Clase pricipal del sistema que controla todas las funciones del ascensor,parte central del sistema
 public class Ascensor {
     private int pisoActual;
     private String direccion; // subiendo, bajando, detenido

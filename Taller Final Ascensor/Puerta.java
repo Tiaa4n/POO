@@ -1,4 +1,4 @@
-//Clase puerta;hace la funcion de abrir y cerrar la puerta del elevador
+//Clase puerta;hace la funcion de abrir y cerrar la puerta del elevador y controla el estado de las puertas,encapsulacion
 public class Puerta {
     private boolean abierta;
 
